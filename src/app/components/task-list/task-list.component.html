@@ -1,0 +1,14 @@
+<section class="task-list">
+  <ul>
+    @for (task of task; track task.id) {
+    @if (!task.completed) {
+    <li>
+      <input class="checkbox" type="checkbox" [(ngModel)]="task.completed" />
+      {{ task.title }}
+      <a [routerLink]="['/update', task.id]">Update</a>
+    </li>
+    }
+    }
+  </ul>
+  <a routerLink="/add">Ajouter une tâche</a>
+</section>

@@ -1,0 +1,9 @@
+<div class="task-form">
+  <form [formGroup]="taskForm" (submit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Task Title</label>
+      <input type="text" id="title" name="title" formControlName="title" />
+    </div>
+    <button class="button" type="submit">Submit</button>
+  </form>
+</div>
